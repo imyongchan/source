@@ -1,0 +1,157 @@
+┌─────────────────────────────┐
+│           User               │
+├─────────────────────────────┤
+│ user_id (PK)                │
+│ email                       │
+│ password                    │
+│ name                        │
+│ age                         │
+│ gender                      │
+│ region                      │
+│ job_type_id (FK)            │
+│ created_at                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│         JobType             │
+├─────────────────────────────┤
+│ job_type_id (PK)            │
+│ name                        │  # 제조업/건설업/물류/서비스업 등
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│        StatsData            │   # 산재 통계 (비회원/회원 모두 사용)
+├─────────────────────────────┤
+│ stats_id (PK)               │
+│ year                        │
+│ region                      │
+│ job_type_id (FK)            │
+│ accident_count              │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       AccidentCase          │  # 실제 사고 사례 데이터
+├─────────────────────────────┤
+│ case_id (PK)                │
+│ job_type_id (FK)            │
+│ title                       │
+│ description                 │
+│ body_part                   │
+│ cause                       │
+│ date                        │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       SafetyGuide           │  # 직종별 안전 가이드
+├─────────────────────────────┤
+│ guide_id (PK)               │
+│ job_type_id (FK)            │
+│ title                       │
+│ content                     │
+│ level (low/medium/high)     │
+│ created_at                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       UserAccident          │   # 사고 입력 (회원)
+├─────────────────────────────┤
+│ ua_id (PK)                  │
+│ user_id (FK)                │
+│ accident_type               │
+│ body_part                   │
+│ symptoms                    │
+│ description                 │
+│ date                        │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│      AccidentToDept         │   # 사고 부위 → 진료과 매핑
+├─────────────────────────────┤
+│ map_id (PK)                 │
+│ body_part                   │
+│ recommended_dept            │  # 정형외과, 신경외과 등
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│         Hospital            │  # 병원 정보
+├─────────────────────────────┤
+│ hospital_id (PK)            │
+│ name                        │
+│ region                      │
+│ address                     │
+│ tel                         │
+│ major_depart                │
+│ latitude                    │
+│ longitude                   │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│      HospitalReview         │  # 병원 리뷰(선택)
+├─────────────────────────────┤
+│ review_id (PK)              │
+│ hospital_id (FK)            │
+│ user_id (FK)                │
+│ rating                      │
+│ content                     │
+│ created_at                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       UserFavorite          │  # 즐겨찾기(사례, 가이드)
+├─────────────────────────────┤
+│ favorite_id (PK)            │
+│ user_id (FK)                │
+│ target_type                 │ # case/guide
+│ target_id                   │
+│ created_at                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│      RiskFactor             │  # 직종별 위험요인 데이터
+├─────────────────────────────┤
+│ factor_id (PK)              │
+│ job_type_id (FK)            │
+│ title                       │
+│ description                 │
+│ risk_level                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│   PersonalizedRiskLog       │ # 회원 맞춤 위험요인 결과 저장
+├─────────────────────────────┤
+│ pr_id (PK)                  │
+│ user_id (FK)                │
+│ factor_id (FK)              │
+│ created_at                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│      WeatherRisk            │ # 날씨 기반 작업 위험도(옵션)
+├─────────────────────────────┤
+│ wr_id (PK)                  │
+│ region                      │
+│ date                        │
+│ temperature                 │
+│ fine_dust                   │
+│ heat_warning                │
+│ risk_score                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       UserSetting           │  # 알림/환경 설정
+├─────────────────────────────┤
+│ setting_id (PK)             │
+│ user_id (FK)                │
+│ push_notification           │
+│ email_notification          │
+│ theme_mode                  │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│       LoginHistory          │
+├─────────────────────────────┤
+│ history_id (PK)             │
+│ user_id (FK)                │
+│ login_time                  │
+│ ip_address                  │
+└─────────────────────────────┘
