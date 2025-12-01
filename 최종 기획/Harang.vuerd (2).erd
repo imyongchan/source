@@ -4,9 +4,9 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -793.9229,
-    "scrollLeft": -319.7093,
-    "zoomLevel": 0.73,
+    "scrollTop": 0,
+    "scrollLeft": -606,
+    "zoomLevel": 1,
     "show": 511,
     "database": 4,
     "databaseName": "",
@@ -166,8 +166,7 @@
           "VJaxfkF2nTt2IoZyfw0mY",
           "S4kwi_yXBVJAfWza1h4rv",
           "M3Q7KbcZafVm2-lb7N9Zv",
-          "6nBYbJ3XZ-Ode63ev8aHN",
-          "xfvW3w4LIyvpZsJqbeeLb"
+          "6nBYbJ3XZ-Ode63ev8aHN"
         ],
         "seqColumnIds": [
           "RWzkJqjeHFTkwLwEjpAV-",
@@ -187,7 +186,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1764552307222,
+          "updateAt": 1764552751217,
           "createAt": 1764228996456
         }
       },
@@ -347,15 +346,15 @@
           "cq91BYvr5GDYe5M8oPp2r"
         ],
         "ui": {
-          "x": 1296.5638,
-          "y": 105.2469,
+          "x": 1267.5638,
+          "y": 17.2469,
           "zIndex": 2,
           "widthName": 60,
           "widthComment": 113,
           "color": ""
         },
         "meta": {
-          "updateAt": 1764430060694,
+          "updateAt": 1764552858200,
           "createAt": 1764228996457
         }
       },
@@ -1228,7 +1227,7 @@
         "name": "s_publisher",
         "comment": "자료 출처명",
         "dataType": "VARCHAR(100)",
-        "default": "'KOSHA'",
+        "default": "KOSHA",
         "options": 8,
         "ui": {
           "keys": 0,
@@ -1238,7 +1237,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1764416957177,
+          "updateAt": 1764552710420,
           "createAt": 1764228996457
         }
       },
@@ -2306,7 +2305,7 @@
         "id": "6nBYbJ3XZ-Ode63ev8aHN",
         "tableId": "fTb64bn8Doeas9AQeAQLG",
         "name": "r_rating",
-        "comment": "병원평점",
+        "comment": "평점",
         "dataType": "FLOAT",
         "default": "",
         "options": 8,
@@ -2318,7 +2317,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1764552248568,
+          "updateAt": 1764552831474,
           "createAt": 1764552197809
         }
       },
@@ -2402,8 +2401,8 @@
           "columnIds": [
             "tqjtInQkOpC8F7RHH_XDD"
           ],
-          "x": 1296.5638,
-          "y": 241.24689999999998,
+          "x": 1267.5638,
+          "y": 153.2469,
           "direction": 1
         },
         "end": {
@@ -2412,7 +2411,7 @@
             "2earOzknHn5D8ELer0gkx"
           ],
           "x": 1194.2060000000001,
-          "y": 305.6171,
+          "y": 299.6171,
           "direction": 2
         },
         "meta": {
@@ -2440,7 +2439,7 @@
             "VJaxfkF2nTt2IoZyfw0mY"
           ],
           "x": 1194.2060000000001,
-          "y": 417.6171,
+          "y": 399.6171,
           "direction": 2
         },
         "meta": {
